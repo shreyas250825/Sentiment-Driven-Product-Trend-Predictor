@@ -4935,3 +4935,7 @@ cwd: None
 2025-09-09 12:22:58,338 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
 2025-09-09 12:22:58,341 - services.youtube_service - INFO - YouTube API initialized successfully
 2025-09-09 12:22:59,083 - main - INFO - Firebase initialized successfully
+2025-09-09 12:23:55,184 - dependencies - WARNING - Token verification failed: Token used too early, 1757400835 < 1757400837. Check that your computer's clock is set correctly.
+2025-09-09 12:23:55,184 - main - WARNING - HTTP error 401: Invalid authentication token
+2025-09-09 12:23:55,187 - dependencies - WARNING - Token verification failed: Token used too early, 1757400835 < 1757400837. Check that your computer's clock is set correctly.
+2025-09-09 12:23:55,187 - main - WARNING - HTTP error 401: Invalid authentication token
