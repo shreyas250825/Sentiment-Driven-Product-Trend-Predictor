@@ -96,6 +96,9 @@ from services import (
     news_service, google_trends_service, ecommerce_scraper,
     openrouter_service, sales_forecaster, trend_predictor
 )
+import numpy as np
+np.float_ = np.float64
+
 from routes import analysis, status, auth, profile, newsletter
 
 # --- Include routers ---
