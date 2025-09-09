@@ -5015,3 +5015,37 @@ cwd: None
 2025-09-09 19:01:49,276 - services.youtube_service - INFO - YouTube API initialized successfully
 2025-09-09 19:02:20,550 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
 2025-09-09 19:02:20,552 - services.youtube_service - INFO - YouTube API initialized successfully
+2025-09-09 19:03:15,182 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-09 19:03:15,186 - services.youtube_service - INFO - YouTube API initialized successfully
+2025-09-09 19:03:16,829 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-09 19:03:16,832 - services.youtube_service - INFO - YouTube API initialized successfully
+2025-09-09 19:03:17,777 - main - INFO - Firebase initialized successfully
+2025-09-09 19:10:36,511 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-09 19:10:36,515 - services.youtube_service - INFO - YouTube API initialized successfully
+2025-09-09 19:10:38,725 - prophet.plot - ERROR - Importing plotly failed. Interactive plots will not work.
+2025-09-09 19:10:53,631 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-09 19:10:53,636 - services.youtube_service - INFO - YouTube API initialized successfully
+2025-09-09 19:11:26,362 - main - INFO - Shutting down application
+2025-09-09 19:11:34,522 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-09 19:11:34,526 - services.youtube_service - INFO - YouTube API initialized successfully
+2025-09-09 19:11:36,117 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-09 19:11:36,120 - services.youtube_service - INFO - YouTube API initialized successfully
+2025-09-09 19:11:36,889 - main - INFO - Firebase initialized successfully
+2025-09-09 19:12:25,277 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-09 19:12:25,283 - services.youtube_service - INFO - YouTube API initialized successfully
+2025-09-09 19:12:26,549 - prophet.plot - ERROR - Importing plotly failed. Interactive plots will not work.
+2025-09-09 19:12:26,852 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-09 19:12:26,856 - services.youtube_service - INFO - YouTube API initialized successfully
+2025-09-09 19:14:26,097 - main - INFO - Shutting down application
+2025-09-09 19:14:31,215 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-09 19:14:31,218 - services.youtube_service - INFO - YouTube API initialized successfully
+2025-09-09 19:14:32,272 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-09 19:14:32,275 - services.youtube_service - INFO - YouTube API initialized successfully
+2025-09-09 19:14:33,051 - main - INFO - Firebase initialized successfully
+2025-09-09 19:17:26,423 - main - INFO - Shutting down application
+2025-09-09 19:17:31,509 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-09 19:17:31,512 - services.youtube_service - INFO - YouTube API initialized successfully
+2025-09-09 19:17:32,688 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-09 19:17:32,691 - services.youtube_service - INFO - YouTube API initialized successfully
+2025-09-09 19:17:33,397 - main - INFO - Firebase initialized successfully
+2025-09-09 19:18:07,757 - main - INFO - Shutting down application

@@ -3,12 +3,16 @@ import tweepy
 import logging
 from datetime import datetime
 from typing import List, Dict
+import nltk
 from nltk.sentiment import SentimentIntensityAnalyzer
 
 logger = logging.getLogger(__name__)
 
 class TwitterService:
     def __init__(self):
+        # Ensure NLTK data path includes the local nltk_data directory
+        nltk.data.path.append(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'nltk_data'))
+        
         self.auth = tweepy.OAuthHandler(
             os.getenv("TWITTER_API_KEY"),
             os.getenv("TWITTER_API_SECRET")
