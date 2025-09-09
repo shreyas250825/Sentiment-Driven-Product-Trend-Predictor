@@ -3,33 +3,6 @@ import logging
 from datetime import datetime
 from contextlib import asynccontextmanager
 
-# --- NLTK setup (must be before any NLTK imports) ---
-import nltk
-
-# Use /tmp for Render to ensure a writable path
-nltk_data_dir = "/tmp/nltk_data"
-os.makedirs(nltk_data_dir, exist_ok=True)
-nltk.data.path.append(nltk_data_dir)
-
-# Download wordnet if not already present
-try:
-    nltk.data.find("corpora/wordnet")
-except LookupError:
-    nltk.download("wordnet", download_dir=nltk_data_dir, quiet=True)
-
-# Now safe to import NLTK modules that use WordNet
-from nltk.stem.wordnet import WordNetLemmatizer
-
-# --- FastAPI and related imports ---
-from fastapi import FastAPI, HTTPException, Request
-from fastapi.responses import JSONResponse
-from fastapi.middleware.cors import CORSMiddleware
-from fastapi.security import HTTPBearer
-
-# --- Firebase imports ---
-import firebase_admin
-from firebase_admin import credentials, firestore
-
 # --- Load environment variables ---
 from dotenv import load_dotenv
 load_dotenv()
@@ -75,6 +48,26 @@ async def lifespan(app: FastAPI):
 
     # Shutdown
     logger.info("Shutting down application")
+
+# --- FastAPI and related imports ---
+from fastapi import FastAPI, HTTPException, Request
+from fastapi.responses import JSONResponse
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.security import HTTPBearer
+
+# --- Firebase imports ---
+import firebase_admin
+from firebase_admin import credentials, firestore
+
+# --- NLTK setup (must be after environment variables loaded) ---
+import nltk
+
+# NLTK data is downloaded during build, so just ensure path is set
+nltk_data_dir = os.path.join(os.getcwd(), 'nltk_data')
+nltk.data.path.append(nltk_data_dir)
+
+# Now safe to import NLTK modules that use WordNet
+from nltk.stem.wordnet import WordNetLemmatizer
 
 # --- FastAPI App ---
 app = FastAPI(

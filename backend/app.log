@@ -4954,3 +4954,8 @@ cwd: None
 2025-09-09 14:20:31,835 - main - INFO - Firebase initialized successfully
 2025-09-09 14:20:35,313 - main - INFO - NLTK wordnet resource downloaded successfully to C:\Users\shrey\OneDrive\Desktop\Minor in AI\sentiment-trend-predictor\backend\nltk_data
 2025-09-09 14:30:26,423 - main - INFO - Shutting down application
+2025-09-09 14:30:33,083 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-09 14:30:33,087 - services.youtube_service - INFO - YouTube API initialized successfully
+2025-09-09 14:30:34,629 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-09 14:30:34,632 - services.youtube_service - INFO - YouTube API initialized successfully
+2025-09-09 14:30:35,524 - main - INFO - Firebase initialized successfully
