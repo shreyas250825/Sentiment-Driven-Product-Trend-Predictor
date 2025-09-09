@@ -82,6 +82,7 @@ app.add_middleware(
         "http://127.0.0.1:3000",
         "https://sentiment-driven-product-trend-predictor-gw8eb1lb3.vercel.app",
         "https://sentiment-driven-product-trend-predictor-833d3hte4.vercel.app",
+        "https://sentiment-driven-product-trend-pred.vercel.app",
         "https://sentiment-driven-product-trend-predictor.vercel.app"
     ],
     allow_credentials=True,

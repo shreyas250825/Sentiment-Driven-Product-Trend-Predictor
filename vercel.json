@@ -2,7 +2,7 @@
   "version": 2,
   "routes": [
     {
-      "src": "/((?!static/|favicon.ico|manifest.json|robots.txt).*)",
+      "src": "/((?!static/|favicon.ico|manifest.json|robots.txt|logo192.png|logo512.png).*)",
       "dest": "/index.html"
     }
   ],
