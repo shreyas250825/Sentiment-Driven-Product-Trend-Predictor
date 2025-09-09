@@ -5,3 +5,12 @@
 2025-09-09 19:49:44,761 - services.youtube_service - INFO - YouTube API initialized successfully
 2025-09-09 19:49:45,201 - services.ecommerce_scraper - INFO - UserAgent initialized successfully
 2025-09-09 19:49:45,244 - main - INFO - Firebase initialized successfully
+2025-09-09 21:07:32,702 - main - INFO - Shutting down application
+2025-09-09 21:07:45,148 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-09 21:07:45,152 - services.youtube_service - INFO - YouTube API initialized successfully
+2025-09-09 21:07:46,191 - services.ecommerce_scraper - INFO - UserAgent initialized successfully
+2025-09-09 21:07:47,270 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-09 21:07:47,274 - services.youtube_service - INFO - YouTube API initialized successfully
+2025-09-09 21:07:48,734 - services.ecommerce_scraper - INFO - UserAgent initialized successfully
+2025-09-09 21:07:48,826 - main - INFO - Firebase initialized successfully
+2025-09-09 21:10:32,250 - main - INFO - Shutting down application
