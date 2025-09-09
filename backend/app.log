@@ -4940,3 +4940,10 @@ cwd: None
 2025-09-09 12:23:55,187 - dependencies - WARNING - Token verification failed: Token used too early, 1757400835 < 1757400837. Check that your computer's clock is set correctly.
 2025-09-09 12:23:55,187 - main - WARNING - HTTP error 401: Invalid authentication token
 2025-09-09 14:13:26,567 - main - INFO - Shutting down application
+2025-09-09 14:13:31,759 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-09 14:13:31,763 - services.youtube_service - INFO - YouTube API initialized successfully
+2025-09-09 14:13:33,373 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-09 14:13:33,376 - services.youtube_service - INFO - YouTube API initialized successfully
+2025-09-09 14:13:34,200 - main - INFO - Firebase initialized successfully
+2025-09-09 14:13:37,222 - main - INFO - NLTK wordnet resource downloaded successfully
+2025-09-09 14:20:26,450 - main - INFO - Shutting down application
