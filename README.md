@@ -193,7 +193,7 @@ sentiment-trend-predictor/
    npm start
    ```
 
-4. Open [https://sentiment-trend-predictor.vercel.app](https://sentiment-trend-predictor.vercel.app) in your browser
+4. Open [https://sentiment-trend-predictor.vercel.app](https://sentiment-driven-product-trend-pred.vercel.app/) in your browser
 
 ## 🚀 Deployment
 
