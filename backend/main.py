@@ -9,6 +9,7 @@ from firebase_admin import credentials, firestore
 import logging
 from datetime import datetime
 from contextlib import asynccontextmanager
+import nltk
 
 # Load environment variables first
 load_dotenv()
@@ -45,6 +46,14 @@ async def lifespan(app: FastAPI):
             firebase_admin.initialize_app(firebase_cred)
         db = firestore.client()
         logger.info("Firebase initialized successfully")
+
+        # Download NLTK resources
+        try:
+            nltk.download('wordnet', quiet=True)
+            logger.info("NLTK wordnet resource downloaded successfully")
+        except Exception as e:
+            logger.error(f"Failed to download NLTK wordnet: {e}")
+            raise
     except Exception as e:
         logger.error(f"Firebase initialization failed: {e}")
         raise

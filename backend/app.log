@@ -4939,3 +4939,4 @@ cwd: None
 2025-09-09 12:23:55,184 - main - WARNING - HTTP error 401: Invalid authentication token
 2025-09-09 12:23:55,187 - dependencies - WARNING - Token verification failed: Token used too early, 1757400835 < 1757400837. Check that your computer's clock is set correctly.
 2025-09-09 12:23:55,187 - main - WARNING - HTTP error 401: Invalid authentication token
+2025-09-09 14:13:26,567 - main - INFO - Shutting down application
