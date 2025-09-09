@@ -18,10 +18,13 @@ logger = logging.getLogger(__name__)
 # --- Global Firebase client ---
 db = None
 
-# --- FastAPI import for lifespan ---
-from fastapi import FastAPI
+# --- FastAPI import ---
+from fastapi import FastAPI, HTTPException, Request
+from fastapi.responses import JSONResponse
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.security import HTTPBearer
 
-# --- Firebase imports for lifespan ---
+# --- Firebase imports ---
 import firebase_admin
 from firebase_admin import credentials, firestore
 
@@ -30,7 +33,6 @@ from firebase_admin import credentials, firestore
 async def lifespan(app: FastAPI):
     global db
     try:
-        # Initialize Firebase
         if not firebase_admin._apps:
             firebase_cred = credentials.Certificate({
                 "type": os.getenv("FIREBASE_TYPE"),
@@ -50,25 +52,16 @@ async def lifespan(app: FastAPI):
     except Exception as e:
         logger.error(f"Firebase initialization failed: {e}")
         raise
-
     yield
-
-    # Shutdown
     logger.info("Shutting down application")
 
-# --- FastAPI and related imports ---
-from fastapi import FastAPI, HTTPException, Request
-from fastapi.responses import JSONResponse
-from fastapi.middleware.cors import CORSMiddleware
-from fastapi.security import HTTPBearer
-
-# --- NLTK setup (must be after environment variables loaded) ---
-# Set NLTK_DATA env var before importing nltk to ensure wordnet is found during import
-os.environ['NLTK_DATA'] = '/tmp/nltk_data'
+# --- Set NLTK data path BEFORE importing nltk ---
+# Use committed folder relative to this file
+NLTK_DATA_DIR = os.path.join(os.path.dirname(__file__), "nltk_data")
+os.environ['NLTK_DATA'] = NLTK_DATA_DIR
 
 import nltk
-
-# Now safe to import NLTK modules that use WordNet
+# Now you can safely import modules using WordNet
 from nltk.stem.wordnet import WordNetLemmatizer
 
 # --- FastAPI App ---
@@ -81,10 +74,10 @@ app = FastAPI(
     lifespan=lifespan
 )
 
-# --- CORS middleware ---
+# --- CORS ---
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000"],  # React frontend
+    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -96,14 +89,13 @@ security = HTTPBearer()
 # --- Track uptime ---
 start_time = datetime.now()
 
-# --- Import your models, services, utils, routes after NLTK & Firebase ---
+# --- Import services, models, routes AFTER NLTK & Firebase ---
 import models, dependencies, utils
 from services import (
     reddit_service, twitter_service, youtube_service,
     news_service, google_trends_service, ecommerce_scraper,
     openrouter_service, sales_forecaster, trend_predictor
 )
-
 from routes import analysis, status, auth, profile, newsletter
 
 # --- Include routers ---
@@ -117,18 +109,12 @@ app.include_router(newsletter.router)
 @app.exception_handler(HTTPException)
 async def http_exception_handler(request: Request, exc: HTTPException):
     logger.warning(f"HTTP error {exc.status_code}: {exc.detail}")
-    return JSONResponse(
-        status_code=exc.status_code,
-        content={"success": False, "error": exc.detail}
-    )
+    return JSONResponse(status_code=exc.status_code, content={"success": False, "error": exc.detail})
 
 @app.exception_handler(Exception)
 async def general_exception_handler(request: Request, exc: Exception):
     logger.error(f"Unexpected error: {exc}", exc_info=True)
-    return JSONResponse(
-        status_code=500,
-        content={"success": False, "error": "Internal server error"}
-    )
+    return JSONResponse(status_code=500, content={"success": False, "error": "Internal server error"})
 
 # --- Health check ---
 @app.get("/health")
@@ -145,7 +131,7 @@ async def root_health_check():
         }
     }
 
-# --- Run with Uvicorn ---
+# --- Run Uvicorn ---
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(
