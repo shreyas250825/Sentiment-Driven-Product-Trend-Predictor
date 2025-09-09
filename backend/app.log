@@ -5074,3 +5074,10 @@ cwd: None
 2025-09-09 19:27:43,253 - services.youtube_service - INFO - YouTube API initialized successfully
 2025-09-09 19:27:43,688 - services.ecommerce_scraper - INFO - UserAgent initialized successfully
 2025-09-09 19:27:43,730 - main - INFO - Firebase initialized successfully
+2025-09-09 19:27:48,229 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-09 19:27:48,232 - services.youtube_service - INFO - YouTube API initialized successfully
+2025-09-09 19:27:48,849 - services.ecommerce_scraper - INFO - UserAgent initialized successfully
+2025-09-09 19:27:49,336 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-09 19:27:49,339 - services.youtube_service - INFO - YouTube API initialized successfully
+2025-09-09 19:27:49,971 - services.ecommerce_scraper - INFO - UserAgent initialized successfully
+2025-09-09 19:27:50,010 - main - INFO - Firebase initialized successfully
