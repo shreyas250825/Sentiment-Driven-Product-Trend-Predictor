@@ -4959,3 +4959,4 @@ cwd: None
 2025-09-09 14:30:34,629 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
 2025-09-09 14:30:34,632 - services.youtube_service - INFO - YouTube API initialized successfully
 2025-09-09 14:30:35,524 - main - INFO - Firebase initialized successfully
+2025-09-09 14:41:26,446 - main - INFO - Shutting down application

@@ -18,6 +18,13 @@ logger = logging.getLogger(__name__)
 # --- Global Firebase client ---
 db = None
 
+# --- FastAPI import for lifespan ---
+from fastapi import FastAPI
+
+# --- Firebase imports for lifespan ---
+import firebase_admin
+from firebase_admin import credentials, firestore
+
 # --- Lifespan context for startup/shutdown ---
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -54,10 +61,6 @@ from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.security import HTTPBearer
-
-# --- Firebase imports ---
-import firebase_admin
-from firebase_admin import credentials, firestore
 
 # --- NLTK setup (must be after environment variables loaded) ---
 import nltk
