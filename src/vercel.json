@@ -15,5 +15,8 @@
       "dest": "/index.html"
     }
   ],
-  "outputDirectory": "build"
+  "outputDirectory": "build",
+  "env": {
+    "REACT_APP_API_BASE_URL": "https://sentiment-driven-product-trend-predictor.onrender.com/api"
+  }
 }
