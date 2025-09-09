@@ -11,6 +11,7 @@ import time
 import random
 import cloudscraper
 from fake_useragent import UserAgent
+from fake_useragent.errors import FakeUserAgentError
 import undetected_chromedriver as uc
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -27,7 +28,17 @@ class EnhancedEcommerceScraper:
     def __init__(self):
         self.session = None
         self.scraper = cloudscraper.create_scraper()
-        self.ua = UserAgent()
+        # Initialize UserAgent with fallback handling
+        try:
+            self.ua = UserAgent()
+            logger.info("UserAgent initialized successfully")
+        except FakeUserAgentError as e:
+            logger.warning(f"Failed to initialize UserAgent: {e}. Using fallback user agent.")
+            self.ua = None
+        except Exception as e:
+            logger.warning(f"Unexpected error initializing UserAgent: {e}. Using fallback user agent.")
+            self.ua = None
+
         self.proxies = self._load_proxies()
         self.retry_count = 5  # Increased retry count
         self.request_delay = random.uniform(3, 8)  # Increased delay
@@ -43,8 +54,16 @@ class EnhancedEcommerceScraper:
     
     def _get_random_headers(self) -> Dict:
         """Generate random headers to avoid detection"""
+        # Use fallback user agent if UserAgent failed to initialize
+        user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+        if self.ua:
+            try:
+                user_agent = self.ua.random
+            except Exception as e:
+                logger.warning(f"Failed to get random user agent: {e}. Using fallback.")
+
         return {
-            'User-Agent': self.ua.random,
+            'User-Agent': user_agent,
             'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
             'Accept-Language': 'en-US,en;q=0.5',
             'Accept-Encoding': 'gzip, deflate',

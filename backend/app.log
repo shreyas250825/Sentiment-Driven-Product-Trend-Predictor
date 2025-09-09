@@ -5049,3 +5049,28 @@ cwd: None
 2025-09-09 19:17:32,691 - services.youtube_service - INFO - YouTube API initialized successfully
 2025-09-09 19:17:33,397 - main - INFO - Firebase initialized successfully
 2025-09-09 19:18:07,757 - main - INFO - Shutting down application
+2025-09-09 19:18:12,822 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-09 19:18:12,825 - services.youtube_service - INFO - YouTube API initialized successfully
+2025-09-09 19:18:14,316 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-09 19:18:14,319 - services.youtube_service - INFO - YouTube API initialized successfully
+2025-09-09 19:18:14,984 - main - INFO - Firebase initialized successfully
+2025-09-09 19:18:20,014 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-09 19:18:20,017 - services.youtube_service - INFO - YouTube API initialized successfully
+2025-09-09 19:18:21,175 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-09 19:18:21,178 - services.youtube_service - INFO - YouTube API initialized successfully
+2025-09-09 19:18:21,859 - main - INFO - Firebase initialized successfully
+2025-09-09 19:27:26,426 - main - INFO - Shutting down application
+2025-09-09 19:27:34,188 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-09 19:27:34,192 - services.youtube_service - INFO - YouTube API initialized successfully
+2025-09-09 19:27:34,696 - services.ecommerce_scraper - INFO - UserAgent initialized successfully
+2025-09-09 19:27:35,450 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-09 19:27:35,453 - services.youtube_service - INFO - YouTube API initialized successfully
+2025-09-09 19:27:36,077 - services.ecommerce_scraper - INFO - UserAgent initialized successfully
+2025-09-09 19:27:36,127 - main - INFO - Firebase initialized successfully
+2025-09-09 19:27:42,091 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-09 19:27:42,095 - services.youtube_service - INFO - YouTube API initialized successfully
+2025-09-09 19:27:42,731 - services.ecommerce_scraper - INFO - UserAgent initialized successfully
+2025-09-09 19:27:43,250 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-09 19:27:43,253 - services.youtube_service - INFO - YouTube API initialized successfully
+2025-09-09 19:27:43,688 - services.ecommerce_scraper - INFO - UserAgent initialized successfully
+2025-09-09 19:27:43,730 - main - INFO - Firebase initialized successfully
