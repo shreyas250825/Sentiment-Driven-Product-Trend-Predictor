@@ -1,20 +1,40 @@
+import os
+import logging
+from datetime import datetime
+from contextlib import asynccontextmanager
+
+# --- NLTK setup (must be before any NLTK imports) ---
+import nltk
+
+# Use /tmp for Render to ensure a writable path
+nltk_data_dir = "/tmp/nltk_data"
+os.makedirs(nltk_data_dir, exist_ok=True)
+nltk.data.path.append(nltk_data_dir)
+
+# Download wordnet if not already present
+try:
+    nltk.data.find("corpora/wordnet")
+except LookupError:
+    nltk.download("wordnet", download_dir=nltk_data_dir, quiet=True)
+
+# Now safe to import NLTK modules that use WordNet
+from nltk.stem.wordnet import WordNetLemmatizer
+
+# --- FastAPI and related imports ---
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.security import HTTPBearer
-import os
-from dotenv import load_dotenv
+
+# --- Firebase imports ---
 import firebase_admin
 from firebase_admin import credentials, firestore
-import logging
-from datetime import datetime
-from contextlib import asynccontextmanager
-import nltk
 
-# Load environment variables first
+# --- Load environment variables ---
+from dotenv import load_dotenv
 load_dotenv()
 
-# Configure logging
+# --- Logging setup ---
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -22,14 +42,15 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-# Global variables for Firebase
+# --- Global Firebase client ---
 db = None
 
+# --- Lifespan context for startup/shutdown ---
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     global db
-    # Startup
     try:
+        # Initialize Firebase
         if not firebase_admin._apps:
             firebase_cred = credentials.Certificate({
                 "type": os.getenv("FIREBASE_TYPE"),
@@ -46,19 +67,6 @@ async def lifespan(app: FastAPI):
             firebase_admin.initialize_app(firebase_cred)
         db = firestore.client()
         logger.info("Firebase initialized successfully")
-
-        # Set up NLTK data directory
-        nltk_data_dir = os.path.join(os.getcwd(), 'nltk_data')
-        os.makedirs(nltk_data_dir, exist_ok=True)
-        nltk.data.path.append(nltk_data_dir)
-
-        # Download NLTK resources
-        try:
-            nltk.download('wordnet', download_dir=nltk_data_dir, quiet=True)
-            logger.info(f"NLTK wordnet resource downloaded successfully to {nltk_data_dir}")
-        except Exception as e:
-            logger.error(f"Failed to download NLTK wordnet: {e}")
-            raise
     except Exception as e:
         logger.error(f"Firebase initialization failed: {e}")
         raise
@@ -78,22 +86,22 @@ app = FastAPI(
     lifespan=lifespan
 )
 
-# ✅ Updated CORS middleware configuration (React frontend specific)
+# --- CORS middleware ---
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000"],  # Your React app's URL
+    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000"],  # React frontend
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-# Security
+# --- Security ---
 security = HTTPBearer()
 
-# Track startup time
+# --- Track uptime ---
 start_time = datetime.now()
 
-# --- Import models, dependencies, utils after Firebase ---
+# --- Import your models, services, utils, routes after NLTK & Firebase ---
 import models, dependencies, utils
 from services import (
     reddit_service, twitter_service, youtube_service,
@@ -101,17 +109,16 @@ from services import (
     openrouter_service, sales_forecaster, trend_predictor
 )
 
-# --- Import routes ---
-from routes import analysis, status, auth, profile, newsletter  # make sure routes/ is a package with __init__.py
+from routes import analysis, status, auth, profile, newsletter
 
-# Include routers
+# --- Include routers ---
 app.include_router(analysis.router)
 app.include_router(status.router)
 app.include_router(auth.router)
 app.include_router(profile.router)
 app.include_router(newsletter.router)
 
-# --- Error handlers ---
+# --- Exception handlers ---
 @app.exception_handler(HTTPException)
 async def http_exception_handler(request: Request, exc: HTTPException):
     logger.warning(f"HTTP error {exc.status_code}: {exc.detail}")
@@ -128,10 +135,9 @@ async def general_exception_handler(request: Request, exc: Exception):
         content={"success": False, "error": "Internal server error"}
     )
 
-# --- Root-level health check endpoint ---
+# --- Health check ---
 @app.get("/health")
 async def root_health_check():
-    """Root-level health check for compatibility with various health check tools"""
     return {
         "status": "healthy",
         "timestamp": datetime.now().isoformat(),
@@ -147,5 +153,10 @@ async def root_health_check():
 # --- Run with Uvicorn ---
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000, log_level="info", reload=False)
-# Note: Reload disabled to prevent startup issues
+    uvicorn.run(
+        "main:app",
+        host="0.0.0.0",
+        port=int(os.environ.get("PORT", 8000)),
+        log_level="info",
+        reload=False
+    )
