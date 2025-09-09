@@ -22,3 +22,218 @@
 2025-09-09 21:10:41,887 - services.ecommerce_scraper - INFO - UserAgent initialized successfully
 2025-09-09 21:10:41,961 - main - INFO - Firebase initialized successfully
 2025-09-09 21:15:32,493 - main - INFO - Shutting down application
+2025-09-09 21:15:41,260 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-09 21:15:41,266 - services.youtube_service - INFO - YouTube API initialized successfully
+2025-09-09 21:15:42,561 - services.ecommerce_scraper - INFO - UserAgent initialized successfully
+2025-09-09 21:15:43,697 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-09 21:15:43,702 - services.youtube_service - INFO - YouTube API initialized successfully
+2025-09-09 21:15:44,687 - services.ecommerce_scraper - INFO - UserAgent initialized successfully
+2025-09-09 21:15:44,745 - main - INFO - Firebase initialized successfully
+2025-09-09 21:32:14,284 - dependencies - WARNING - Token verification failed: Token expired, 1757428114 < 1757433734
+2025-09-09 21:32:14,286 - main - WARNING - HTTP error 401: Invalid authentication token
+2025-09-09 21:32:33,955 - services.product_analyzer - INFO - Starting analysis for: iphone 16 from sources: ['reddit', 'twitter', 'youtube', 'news', 'google_trends', 'amazon']
+2025-09-09 21:32:33,955 - services.product_analyzer - INFO - Cache key: iphone 16_amazon_google_trends_news_reddit_twitter_youtube
+2025-09-09 21:32:33,955 - services.product_analyzer - INFO - No cached data found for: iphone 16_amazon_google_trends_news_reddit_twitter_youtube
+2025-09-09 21:32:33,958 - services.product_analyzer - INFO - Waiting for 6 tasks to complete for sources: ['reddit', 'twitter', 'youtube', 'news', 'google_trends', 'amazon']
+2025-09-09 21:32:34,637 - services.twitter_service - ERROR - Twitter API error: 403 Forbidden
+453 - You currently have access to a subset of X API V2 endpoints and limited v1.1 endpoints (e.g. media post, oauth) only. If you need access to this endpoint, you may need a different access level. You can learn more here: https://developer.x.com/en/portal/product
+2025-09-09 21:32:38,572 - services.youtube_service - INFO - YouTube validation: 20/20 videos passed validation
+2025-09-09 21:32:38,573 - services.youtube_service - INFO - YouTube search completed: 20 valid videos for 'iphone 16'
+2025-09-09 21:32:40,795 - services.google_trends_service - ERROR - Google Trends error: The request failed: Google returned a response with code 429
+2025-09-09 21:32:43,754 - undetected_chromedriver.patcher - INFO - patching driver executable C:\Users\shrey\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2025-09-09 21:32:45,792 - services.ecommerce_scraper - ERROR - Failed to initialize Selenium driver: Message: session not created: cannot connect to chrome at 127.0.0.1:57312
+from session not created: This version of ChromeDriver only supports Chrome version 140
+Current browser version is 139.0.7258.155
+Stacktrace:
+	GetHandleVerifier [0x0x39d283+66419]
+	GetHandleVerifier [0x0x39d2c4+66484]
+	(No symbol) [0x0x174bd3]
+	(No symbol) [0x0x1afc48]
+	(No symbol) [0x0x1aec29]
+	(No symbol) [0x0x1a4e6f]
+	(No symbol) [0x0x1a4c96]
+	(No symbol) [0x0x1ecce4]
+	(No symbol) [0x0x1ec5ea]
+	(No symbol) [0x0x1e0e16]
+	(No symbol) [0x0x1b25ce]
+	(No symbol) [0x0x1b34a4]
+	GetHandleVerifier [0x0x5e5ec3+2461619]
+	GetHandleVerifier [0x0x5e0f46+2441270]
+	GetHandleVerifier [0x0x3c6222+234258]
+	GetHandleVerifier [0x0x3b61e8+168664]
+	GetHandleVerifier [0x0x3bd18d+197245]
+	GetHandleVerifier [0x0x3a55d8+100040]
+	GetHandleVerifier [0x0x3a5772+100450]
+	GetHandleVerifier [0x0x38f72a+10266]
+	BaseThreadInitThunk [0x0x767d5d49+25]
+	RtlInitializeExceptionChain [0x0x77d3d2fb+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77d3d281+561]
+	(No symbol) [0x0]
+
+2025-09-09 21:32:54,531 - services.reddit_service - INFO - Found 100 Reddit posts for iphone 16
+2025-09-09 21:32:54,531 - services.product_analyzer - INFO - All tasks completed. Results count: 6
+2025-09-09 21:32:54,532 - services.product_analyzer - INFO - Task 0 (reddit) returned 100 items
+2025-09-09 21:32:54,532 - services.product_analyzer - INFO - Task 1 (twitter) returned 3 items
+2025-09-09 21:32:54,532 - services.product_analyzer - INFO - Task 2 (youtube) returned 20 items
+2025-09-09 21:32:54,532 - services.product_analyzer - INFO - Task 3 (news) returned 20 items
+2025-09-09 21:32:54,532 - services.product_analyzer - INFO - Task 4 (google_trends) returned non-list items
+2025-09-09 21:32:54,532 - services.product_analyzer - INFO - Google trends data received: <class 'dict'>
+2025-09-09 21:32:54,532 - services.product_analyzer - INFO - Task 5 (amazon) returned 3 items
+2025-09-09 21:32:54,532 - services.product_analyzer - INFO - Total data collected from all sources: 146 items
+2025-09-09 21:32:54,532 - services.product_analyzer - INFO - Google trends data available: True
+2025-09-09 21:32:55,503 - services.openrouter_service - WARNING - Primary model failed: 401, message='Unauthorized', url='https://openrouter.ai/api/v1/chat/completions', trying fallback model
+2025-09-09 21:32:56,486 - services.openrouter_service - ERROR - OpenRouter API error: 401, message='Unauthorized', url='https://openrouter.ai/api/v1/chat/completions'
+2025-09-09 21:32:56,491 - services.sales_forecaster - INFO - Using synthetic sales data for 'iphone 16'
+2025-09-09 21:32:56,719 - cmdstanpy - DEBUG - cmd: where.exe tbb.dll
+cwd: None
+2025-09-09 21:32:56,799 - cmdstanpy - DEBUG - Adding TBB (C:\Users\shrey\AppData\Roaming\Python\Python313\site-packages\prophet\stan_model\cmdstan-2.33.1\stan\lib\stan_math\lib\tbb) to PATH
+2025-09-09 21:32:56,870 - cmdstanpy - DEBUG - input tempfile: C:\Users\shrey\AppData\Local\Temp\tmpkl6smxnd\ef0k8rst.json
+2025-09-09 21:32:56,883 - cmdstanpy - DEBUG - input tempfile: C:\Users\shrey\AppData\Local\Temp\tmpkl6smxnd\h0o7afe5.json
+2025-09-09 21:32:56,891 - cmdstanpy - DEBUG - idx 0
+2025-09-09 21:32:56,891 - cmdstanpy - DEBUG - running CmdStan, num_threads: None
+2025-09-09 21:32:56,892 - cmdstanpy - DEBUG - CmdStan args: ['C:\\Users\\shrey\\AppData\\Roaming\\Python\\Python313\\site-packages\\prophet\\stan_model\\prophet_model.bin', 'random', 'seed=6484', 'data', 'file=C:\\Users\\shrey\\AppData\\Local\\Temp\\tmpkl6smxnd\\ef0k8rst.json', 'init=C:\\Users\\shrey\\AppData\\Local\\Temp\\tmpkl6smxnd\\h0o7afe5.json', 'output', 'file=C:\\Users\\shrey\\AppData\\Local\\Temp\\tmpkl6smxnd\\prophet_modeljgop5mdt\\prophet_model-20250909213256.csv', 'method=optimize', 'algorithm=lbfgs', 'iter=10000']
+2025-09-09 21:32:56,892 - cmdstanpy - INFO - Chain [1] start processing
+2025-09-09 21:32:59,753 - cmdstanpy - INFO - Chain [1] done processing
+2025-09-09 21:33:00,580 - services.openrouter_service - WARNING - Primary model failed: 401, message='Unauthorized', url='https://openrouter.ai/api/v1/chat/completions', trying fallback model
+2025-09-09 21:33:01,003 - services.openrouter_service - ERROR - Trend prediction error: 401, message='Unauthorized', url='https://openrouter.ai/api/v1/chat/completions'
+2025-09-09 21:33:01,006 - services.product_analyzer - INFO - Analysis completed for: iphone 16
+2025-09-09 21:40:22,243 - services.product_analyzer - INFO - Starting analysis for: iphone 16 from sources: ['reddit', 'twitter', 'youtube', 'news', 'google_trends', 'amazon']
+2025-09-09 21:40:22,245 - services.product_analyzer - INFO - Cache key: iphone 16_amazon_google_trends_news_reddit_twitter_youtube
+2025-09-09 21:40:22,249 - services.product_analyzer - INFO - Returning cached analysis for: iphone 16
+2025-09-09 21:40:44,793 - services.product_analyzer - INFO - Starting analysis for: Iphone 15 from sources: ['reddit', 'twitter', 'youtube', 'news', 'google_trends', 'amazon']
+2025-09-09 21:40:44,794 - services.product_analyzer - INFO - Cache key: Iphone 15_amazon_google_trends_news_reddit_twitter_youtube
+2025-09-09 21:40:44,794 - services.product_analyzer - INFO - No cached data found for: Iphone 15_amazon_google_trends_news_reddit_twitter_youtube
+2025-09-09 21:40:44,799 - services.product_analyzer - INFO - Waiting for 6 tasks to complete for sources: ['reddit', 'twitter', 'youtube', 'news', 'google_trends', 'amazon']
+2025-09-09 21:40:45,735 - services.twitter_service - ERROR - Twitter API error: 403 Forbidden
+453 - You currently have access to a subset of X API V2 endpoints and limited v1.1 endpoints (e.g. media post, oauth) only. If you need access to this endpoint, you may need a different access level. You can learn more here: https://developer.x.com/en/portal/product
+2025-09-09 21:40:49,580 - services.youtube_service - INFO - YouTube validation: 20/20 videos passed validation
+2025-09-09 21:40:49,580 - services.youtube_service - INFO - YouTube search completed: 20 valid videos for 'Iphone 15'
+2025-09-09 21:40:51,557 - services.google_trends_service - ERROR - Google Trends error: The request failed: Google returned a response with code 429
+2025-09-09 21:40:55,098 - undetected_chromedriver.patcher - INFO - patching driver executable C:\Users\shrey\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2025-09-09 21:40:56,596 - services.ecommerce_scraper - ERROR - Failed to initialize Selenium driver: Message: session not created: cannot connect to chrome at 127.0.0.1:53834
+from session not created: This version of ChromeDriver only supports Chrome version 140
+Current browser version is 139.0.7258.155
+Stacktrace:
+	GetHandleVerifier [0x0xa2d283+66419]
+	GetHandleVerifier [0x0xa2d2c4+66484]
+	(No symbol) [0x0x804bd3]
+	(No symbol) [0x0x83fc48]
+	(No symbol) [0x0x83ec29]
+	(No symbol) [0x0x834e6f]
+	(No symbol) [0x0x834c96]
+	(No symbol) [0x0x87cce4]
+	(No symbol) [0x0x87c5ea]
+	(No symbol) [0x0x870e16]
+	(No symbol) [0x0x8425ce]
+	(No symbol) [0x0x8434a4]
+	GetHandleVerifier [0x0xc75ec3+2461619]
+	GetHandleVerifier [0x0xc70f46+2441270]
+	GetHandleVerifier [0x0xa56222+234258]
+	GetHandleVerifier [0x0xa461e8+168664]
+	GetHandleVerifier [0x0xa4d18d+197245]
+	GetHandleVerifier [0x0xa355d8+100040]
+	GetHandleVerifier [0x0xa35772+100450]
+	GetHandleVerifier [0x0xa1f72a+10266]
+	BaseThreadInitThunk [0x0x767d5d49+25]
+	RtlInitializeExceptionChain [0x0x77d3d2fb+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77d3d281+561]
+
+2025-09-09 21:41:02,315 - services.reddit_service - INFO - Found 100 Reddit posts for Iphone 15
+2025-09-09 21:41:02,316 - services.product_analyzer - INFO - All tasks completed. Results count: 6
+2025-09-09 21:41:02,317 - services.product_analyzer - INFO - Task 0 (reddit) returned 100 items
+2025-09-09 21:41:02,317 - services.product_analyzer - INFO - Task 1 (twitter) returned 3 items
+2025-09-09 21:41:02,317 - services.product_analyzer - INFO - Task 2 (youtube) returned 20 items
+2025-09-09 21:41:02,317 - services.product_analyzer - INFO - Task 3 (news) returned 20 items
+2025-09-09 21:41:02,317 - services.product_analyzer - INFO - Task 4 (google_trends) returned non-list items
+2025-09-09 21:41:02,317 - services.product_analyzer - INFO - Google trends data received: <class 'dict'>
+2025-09-09 21:41:02,318 - services.product_analyzer - INFO - Task 5 (amazon) returned 3 items
+2025-09-09 21:41:02,318 - services.product_analyzer - INFO - Total data collected from all sources: 146 items
+2025-09-09 21:41:02,318 - services.product_analyzer - INFO - Google trends data available: True
+2025-09-09 21:41:03,195 - services.openrouter_service - WARNING - Primary model failed: 401, message='Unauthorized', url='https://openrouter.ai/api/v1/chat/completions', trying fallback model
+2025-09-09 21:41:03,709 - services.openrouter_service - ERROR - OpenRouter API error: 401, message='Unauthorized', url='https://openrouter.ai/api/v1/chat/completions'
+2025-09-09 21:41:03,710 - services.sales_forecaster - INFO - Using synthetic sales data for 'Iphone 15'
+2025-09-09 21:41:03,774 - cmdstanpy - DEBUG - cmd: where.exe tbb.dll
+cwd: None
+2025-09-09 21:41:03,846 - cmdstanpy - DEBUG - TBB already found in load path
+2025-09-09 21:41:03,886 - cmdstanpy - DEBUG - input tempfile: C:\Users\shrey\AppData\Local\Temp\tmpkl6smxnd\c9nuruq9.json
+2025-09-09 21:41:03,900 - cmdstanpy - DEBUG - input tempfile: C:\Users\shrey\AppData\Local\Temp\tmpkl6smxnd\xml0_v_3.json
+2025-09-09 21:41:03,905 - cmdstanpy - DEBUG - idx 0
+2025-09-09 21:41:03,906 - cmdstanpy - DEBUG - running CmdStan, num_threads: None
+2025-09-09 21:41:03,906 - cmdstanpy - DEBUG - CmdStan args: ['C:\\Users\\shrey\\AppData\\Roaming\\Python\\Python313\\site-packages\\prophet\\stan_model\\prophet_model.bin', 'random', 'seed=87857', 'data', 'file=C:\\Users\\shrey\\AppData\\Local\\Temp\\tmpkl6smxnd\\c9nuruq9.json', 'init=C:\\Users\\shrey\\AppData\\Local\\Temp\\tmpkl6smxnd\\xml0_v_3.json', 'output', 'file=C:\\Users\\shrey\\AppData\\Local\\Temp\\tmpkl6smxnd\\prophet_modeldvbptu5w\\prophet_model-20250909214103.csv', 'method=optimize', 'algorithm=lbfgs', 'iter=10000']
+2025-09-09 21:41:03,906 - cmdstanpy - INFO - Chain [1] start processing
+2025-09-09 21:41:03,968 - cmdstanpy - INFO - Chain [1] done processing
+2025-09-09 21:41:04,414 - services.openrouter_service - WARNING - Primary model failed: 401, message='Unauthorized', url='https://openrouter.ai/api/v1/chat/completions', trying fallback model
+2025-09-09 21:41:04,716 - services.openrouter_service - ERROR - Trend prediction error: 401, message='Unauthorized', url='https://openrouter.ai/api/v1/chat/completions'
+2025-09-09 21:41:04,717 - services.product_analyzer - INFO - Analysis completed for: Iphone 15
+2025-09-09 21:43:54,959 - services.product_analyzer - INFO - Starting analysis for: Iphone 15 from sources: ['reddit', 'twitter', 'youtube', 'news', 'google_trends', 'amazon']
+2025-09-09 21:43:54,959 - services.product_analyzer - INFO - Cache key: Iphone 15_amazon_google_trends_news_reddit_twitter_youtube
+2025-09-09 21:43:54,960 - services.product_analyzer - INFO - Returning cached analysis for: Iphone 15
+2025-09-09 21:44:07,436 - services.product_analyzer - INFO - Starting analysis for: Iphone 16 from sources: ['reddit', 'twitter', 'youtube', 'news', 'google_trends', 'amazon']
+2025-09-09 21:44:07,437 - services.product_analyzer - INFO - Cache key: Iphone 16_amazon_google_trends_news_reddit_twitter_youtube
+2025-09-09 21:44:07,437 - services.product_analyzer - INFO - No cached data found for: Iphone 16_amazon_google_trends_news_reddit_twitter_youtube
+2025-09-09 21:44:07,437 - services.product_analyzer - INFO - Waiting for 6 tasks to complete for sources: ['reddit', 'twitter', 'youtube', 'news', 'google_trends', 'amazon']
+2025-09-09 21:44:08,174 - services.twitter_service - ERROR - Twitter API error: 403 Forbidden
+453 - You currently have access to a subset of X API V2 endpoints and limited v1.1 endpoints (e.g. media post, oauth) only. If you need access to this endpoint, you may need a different access level. You can learn more here: https://developer.x.com/en/portal/product
+2025-09-09 21:44:11,759 - services.youtube_service - INFO - YouTube validation: 20/20 videos passed validation
+2025-09-09 21:44:11,760 - services.youtube_service - INFO - YouTube search completed: 20 valid videos for 'Iphone 16'
+2025-09-09 21:44:14,697 - services.google_trends_service - ERROR - Google Trends error: The request failed: Google returned a response with code 429
+2025-09-09 21:44:17,511 - undetected_chromedriver.patcher - INFO - patching driver executable C:\Users\shrey\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2025-09-09 21:44:18,860 - services.ecommerce_scraper - ERROR - Failed to initialize Selenium driver: Message: session not created: cannot connect to chrome at 127.0.0.1:59858
+from session not created: This version of ChromeDriver only supports Chrome version 140
+Current browser version is 139.0.7258.155
+Stacktrace:
+	GetHandleVerifier [0x0xecd283+66419]
+	GetHandleVerifier [0x0xecd2c4+66484]
+	(No symbol) [0x0xca4bd3]
+	(No symbol) [0x0xcdfc48]
+	(No symbol) [0x0xcdec29]
+	(No symbol) [0x0xcd4e6f]
+	(No symbol) [0x0xcd4c96]
+	(No symbol) [0x0xd1cce4]
+	(No symbol) [0x0xd1c5ea]
+	(No symbol) [0x0xd10e16]
+	(No symbol) [0x0xce25ce]
+	(No symbol) [0x0xce34a4]
+	GetHandleVerifier [0x0x1115ec3+2461619]
+	GetHandleVerifier [0x0x1110f46+2441270]
+	GetHandleVerifier [0x0xef6222+234258]
+	GetHandleVerifier [0x0xee61e8+168664]
+	GetHandleVerifier [0x0xeed18d+197245]
+	GetHandleVerifier [0x0xed55d8+100040]
+	GetHandleVerifier [0x0xed5772+100450]
+	GetHandleVerifier [0x0xebf72a+10266]
+	BaseThreadInitThunk [0x0x767d5d49+25]
+	RtlInitializeExceptionChain [0x0x77d3d2fb+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77d3d281+561]
+
+2025-09-09 21:44:24,527 - services.reddit_service - INFO - Found 100 Reddit posts for Iphone 16
+2025-09-09 21:44:24,528 - services.product_analyzer - INFO - All tasks completed. Results count: 6
+2025-09-09 21:44:24,528 - services.product_analyzer - INFO - Task 0 (reddit) returned 100 items
+2025-09-09 21:44:24,528 - services.product_analyzer - INFO - Task 1 (twitter) returned 3 items
+2025-09-09 21:44:24,528 - services.product_analyzer - INFO - Task 2 (youtube) returned 20 items
+2025-09-09 21:44:24,528 - services.product_analyzer - INFO - Task 3 (news) returned 20 items
+2025-09-09 21:44:24,528 - services.product_analyzer - INFO - Task 4 (google_trends) returned non-list items
+2025-09-09 21:44:24,528 - services.product_analyzer - INFO - Google trends data received: <class 'dict'>
+2025-09-09 21:44:24,529 - services.product_analyzer - INFO - Task 5 (amazon) returned 3 items
+2025-09-09 21:44:24,529 - services.product_analyzer - INFO - Total data collected from all sources: 146 items
+2025-09-09 21:44:24,529 - services.product_analyzer - INFO - Google trends data available: True
+2025-09-09 21:44:25,490 - services.openrouter_service - WARNING - Primary model failed: 401, message='Unauthorized', url='https://openrouter.ai/api/v1/chat/completions', trying fallback model
+2025-09-09 21:44:25,932 - services.openrouter_service - ERROR - OpenRouter API error: 401, message='Unauthorized', url='https://openrouter.ai/api/v1/chat/completions'
+2025-09-09 21:44:25,934 - services.sales_forecaster - INFO - Using synthetic sales data for 'Iphone 16'
+2025-09-09 21:44:25,936 - cmdstanpy - DEBUG - cmd: where.exe tbb.dll
+cwd: None
+2025-09-09 21:44:25,993 - cmdstanpy - DEBUG - TBB already found in load path
+2025-09-09 21:44:26,004 - cmdstanpy - DEBUG - input tempfile: C:\Users\shrey\AppData\Local\Temp\tmpkl6smxnd\76vhi0sc.json
+2025-09-09 21:44:26,018 - cmdstanpy - DEBUG - input tempfile: C:\Users\shrey\AppData\Local\Temp\tmpkl6smxnd\vwzlliba.json
+2025-09-09 21:44:26,019 - cmdstanpy - DEBUG - idx 0
+2025-09-09 21:44:26,019 - cmdstanpy - DEBUG - running CmdStan, num_threads: None
+2025-09-09 21:44:26,020 - cmdstanpy - DEBUG - CmdStan args: ['C:\\Users\\shrey\\AppData\\Roaming\\Python\\Python313\\site-packages\\prophet\\stan_model\\prophet_model.bin', 'random', 'seed=83720', 'data', 'file=C:\\Users\\shrey\\AppData\\Local\\Temp\\tmpkl6smxnd\\76vhi0sc.json', 'init=C:\\Users\\shrey\\AppData\\Local\\Temp\\tmpkl6smxnd\\vwzlliba.json', 'output', 'file=C:\\Users\\shrey\\AppData\\Local\\Temp\\tmpkl6smxnd\\prophet_modeldw8__54q\\prophet_model-20250909214426.csv', 'method=optimize', 'algorithm=lbfgs', 'iter=10000']
+2025-09-09 21:44:26,020 - cmdstanpy - INFO - Chain [1] start processing
+2025-09-09 21:44:26,063 - cmdstanpy - INFO - Chain [1] done processing
+2025-09-09 21:44:26,794 - services.openrouter_service - WARNING - Primary model failed: 401, message='Unauthorized', url='https://openrouter.ai/api/v1/chat/completions', trying fallback model
+2025-09-09 21:44:27,799 - services.openrouter_service - ERROR - Trend prediction error: 401, message='Unauthorized', url='https://openrouter.ai/api/v1/chat/completions'
+2025-09-09 21:44:27,799 - services.product_analyzer - INFO - Analysis completed for: Iphone 16
+2025-09-09 21:46:31,558 - main - INFO - Shutting down application
+2025-09-09 21:46:31,595 - uc - INFO - ensuring close
+2025-09-09 21:46:31,596 - uc - INFO - ensuring close
+2025-09-09 21:46:31,596 - uc - INFO - ensuring close

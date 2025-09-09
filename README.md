@@ -193,7 +193,7 @@ sentiment-trend-predictor/
    npm start
    ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser
+4. Open [https://sentiment-trend-predictor.vercel.app](https://sentiment-trend-predictor.vercel.app) in your browser
 
 ## 🚀 Deployment
 
@@ -242,7 +242,7 @@ sentiment-trend-predictor/
      - **Output Directory**: `build`
    - Add environment variables:
      ```
-     REACT_APP_API_BASE_URL=https://your-render-backend-url.onrender.com
+REACT_APP_API_BASE_URL=https://sentiment-driven-product-trend-predictor.onrender.com
      REACT_APP_FIREBASE_API_KEY=your_firebase_key
      REACT_APP_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
      REACT_APP_FIREBASE_PROJECT_ID=your_project_id
@@ -255,8 +255,8 @@ sentiment-trend-predictor/
 ## 📚 API Documentation
 
 Once the backend is running, visit:
-- **API Docs**: `http://localhost:8000/docs` (Swagger UI)
-- **ReDoc**: `http://localhost:8000/redoc`
+- **API Docs**: `https://sentiment-driven-product-trend-predictor.onrender.com/docs` (Swagger UI)
+- **ReDoc**: `https://sentiment-driven-product-trend-predictor.onrender.com/redoc`
 
 ## 🔧 Environment Variables
 
@@ -289,7 +289,7 @@ SECRET_KEY=your_secret_key
 
 ### Frontend (.env)
 ```
-REACT_APP_API_BASE_URL=http://localhost:8000
+REACT_APP_API_BASE_URL=https://sentiment-driven-product-trend-predictor.onrender.com
 REACT_APP_FIREBASE_API_KEY=your_firebase_api_key
 REACT_APP_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
 REACT_APP_FIREBASE_PROJECT_ID=your_project_id

@@ -1,4 +1,4 @@
-services:
+gitservices:
   - type: web
     name: sentiment-trend-predictor
     env: python
