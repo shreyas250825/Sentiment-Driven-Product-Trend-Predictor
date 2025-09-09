@@ -237,3 +237,145 @@ cwd: None
 2025-09-09 21:46:31,595 - uc - INFO - ensuring close
 2025-09-09 21:46:31,596 - uc - INFO - ensuring close
 2025-09-09 21:46:31,596 - uc - INFO - ensuring close
+2025-09-09 21:46:53,629 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-09 21:46:53,638 - services.youtube_service - INFO - YouTube API initialized successfully
+2025-09-09 21:46:54,590 - services.ecommerce_scraper - INFO - UserAgent initialized successfully
+2025-09-09 21:46:55,699 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-09 21:46:55,702 - services.youtube_service - INFO - YouTube API initialized successfully
+2025-09-09 21:46:56,637 - services.ecommerce_scraper - INFO - UserAgent initialized successfully
+2025-09-09 21:46:56,707 - main - INFO - Firebase initialized successfully
+2025-09-09 21:47:44,471 - services.product_analyzer - INFO - Starting analysis for: Iphone 15 from sources: ['reddit', 'twitter', 'youtube', 'news', 'google_trends', 'amazon']
+2025-09-09 21:47:44,471 - services.product_analyzer - INFO - Cache key: Iphone 15_amazon_google_trends_news_reddit_twitter_youtube
+2025-09-09 21:47:44,472 - services.product_analyzer - INFO - No cached data found for: Iphone 15_amazon_google_trends_news_reddit_twitter_youtube
+2025-09-09 21:47:44,472 - services.product_analyzer - INFO - Waiting for 6 tasks to complete for sources: ['reddit', 'twitter', 'youtube', 'news', 'google_trends', 'amazon']
+2025-09-09 21:47:45,193 - services.twitter_service - ERROR - Twitter API error: 403 Forbidden
+453 - You currently have access to a subset of X API V2 endpoints and limited v1.1 endpoints (e.g. media post, oauth) only. If you need access to this endpoint, you may need a different access level. You can learn more here: https://developer.x.com/en/portal/product
+2025-09-09 21:47:48,498 - services.youtube_service - INFO - YouTube validation: 20/20 videos passed validation
+2025-09-09 21:47:48,498 - services.youtube_service - INFO - YouTube search completed: 20 valid videos for 'Iphone 15'
+2025-09-09 21:47:53,128 - services.google_trends_service - ERROR - Google Trends error: The request failed: Google returned a response with code 429
+2025-09-09 21:47:57,250 - undetected_chromedriver.patcher - INFO - patching driver executable C:\Users\shrey\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2025-09-09 21:47:58,498 - services.ecommerce_scraper - ERROR - Failed to initialize Selenium driver: Message: session not created: cannot connect to chrome at 127.0.0.1:57564
+from session not created: This version of ChromeDriver only supports Chrome version 140
+Current browser version is 139.0.7258.155
+Stacktrace:
+	GetHandleVerifier [0x0xf4d283+66419]
+	GetHandleVerifier [0x0xf4d2c4+66484]
+	(No symbol) [0x0xd24bd3]
+	(No symbol) [0x0xd5fc48]
+	(No symbol) [0x0xd5ec29]
+	(No symbol) [0x0xd54e6f]
+	(No symbol) [0x0xd54c96]
+	(No symbol) [0x0xd9cce4]
+	(No symbol) [0x0xd9c5ea]
+	(No symbol) [0x0xd90e16]
+	(No symbol) [0x0xd625ce]
+	(No symbol) [0x0xd634a4]
+	GetHandleVerifier [0x0x1195ec3+2461619]
+	GetHandleVerifier [0x0x1190f46+2441270]
+	GetHandleVerifier [0x0xf76222+234258]
+	GetHandleVerifier [0x0xf661e8+168664]
+	GetHandleVerifier [0x0xf6d18d+197245]
+	GetHandleVerifier [0x0xf555d8+100040]
+	GetHandleVerifier [0x0xf55772+100450]
+	GetHandleVerifier [0x0xf3f72a+10266]
+	BaseThreadInitThunk [0x0x767d5d49+25]
+	RtlInitializeExceptionChain [0x0x77d3d2fb+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77d3d281+561]
+
+2025-09-09 21:48:02,431 - services.reddit_service - INFO - Found 100 Reddit posts for Iphone 15
+2025-09-09 21:48:02,432 - services.product_analyzer - INFO - All tasks completed. Results count: 6
+2025-09-09 21:48:02,432 - services.product_analyzer - INFO - Task 0 (reddit) returned 100 items
+2025-09-09 21:48:02,432 - services.product_analyzer - INFO - Task 1 (twitter) returned 3 items
+2025-09-09 21:48:02,433 - services.product_analyzer - INFO - Task 2 (youtube) returned 20 items
+2025-09-09 21:48:02,433 - services.product_analyzer - INFO - Task 3 (news) returned 20 items
+2025-09-09 21:48:02,433 - services.product_analyzer - INFO - Task 4 (google_trends) returned non-list items
+2025-09-09 21:48:02,433 - services.product_analyzer - INFO - Google trends data received: <class 'dict'>
+2025-09-09 21:48:02,433 - services.product_analyzer - INFO - Task 5 (amazon) returned 3 items
+2025-09-09 21:48:02,433 - services.product_analyzer - INFO - Total data collected from all sources: 146 items
+2025-09-09 21:48:02,433 - services.product_analyzer - INFO - Google trends data available: True
+2025-09-09 21:48:08,096 - services.sales_forecaster - INFO - Using synthetic sales data for 'Iphone 15'
+2025-09-09 21:48:08,136 - cmdstanpy - DEBUG - cmd: where.exe tbb.dll
+cwd: None
+2025-09-09 21:48:08,193 - cmdstanpy - DEBUG - Adding TBB (C:\Users\shrey\AppData\Roaming\Python\Python313\site-packages\prophet\stan_model\cmdstan-2.33.1\stan\lib\stan_math\lib\tbb) to PATH
+2025-09-09 21:48:08,206 - cmdstanpy - DEBUG - input tempfile: C:\Users\shrey\AppData\Local\Temp\tmpcfpld4bh\32vtll_9.json
+2025-09-09 21:48:08,219 - cmdstanpy - DEBUG - input tempfile: C:\Users\shrey\AppData\Local\Temp\tmpcfpld4bh\6rpb2gs6.json
+2025-09-09 21:48:08,221 - cmdstanpy - DEBUG - idx 0
+2025-09-09 21:48:08,221 - cmdstanpy - DEBUG - running CmdStan, num_threads: None
+2025-09-09 21:48:08,221 - cmdstanpy - DEBUG - CmdStan args: ['C:\\Users\\shrey\\AppData\\Roaming\\Python\\Python313\\site-packages\\prophet\\stan_model\\prophet_model.bin', 'random', 'seed=94880', 'data', 'file=C:\\Users\\shrey\\AppData\\Local\\Temp\\tmpcfpld4bh\\32vtll_9.json', 'init=C:\\Users\\shrey\\AppData\\Local\\Temp\\tmpcfpld4bh\\6rpb2gs6.json', 'output', 'file=C:\\Users\\shrey\\AppData\\Local\\Temp\\tmpcfpld4bh\\prophet_modelr4nouf6q\\prophet_model-20250909214808.csv', 'method=optimize', 'algorithm=lbfgs', 'iter=10000']
+2025-09-09 21:48:08,221 - cmdstanpy - INFO - Chain [1] start processing
+2025-09-09 21:48:08,273 - cmdstanpy - INFO - Chain [1] done processing
+2025-09-09 21:48:13,460 - services.product_analyzer - INFO - Analysis completed for: Iphone 15
+2025-09-09 21:48:22,641 - services.product_analyzer - INFO - Starting analysis for: Iphone 15 from sources: ['reddit', 'twitter', 'youtube', 'news', 'google_trends', 'amazon']
+2025-09-09 21:48:22,642 - services.product_analyzer - INFO - Cache key: Iphone 15_amazon_google_trends_news_reddit_twitter_youtube
+2025-09-09 21:48:22,642 - services.product_analyzer - INFO - Returning cached analysis for: Iphone 15
+2025-09-09 21:48:35,866 - services.product_analyzer - INFO - Starting analysis for: Iphone 16 from sources: ['reddit', 'twitter', 'youtube', 'news', 'google_trends', 'amazon']
+2025-09-09 21:48:35,866 - services.product_analyzer - INFO - Cache key: Iphone 16_amazon_google_trends_news_reddit_twitter_youtube
+2025-09-09 21:48:35,867 - services.product_analyzer - INFO - No cached data found for: Iphone 16_amazon_google_trends_news_reddit_twitter_youtube
+2025-09-09 21:48:35,867 - services.product_analyzer - INFO - Waiting for 6 tasks to complete for sources: ['reddit', 'twitter', 'youtube', 'news', 'google_trends', 'amazon']
+2025-09-09 21:48:36,681 - services.twitter_service - ERROR - Twitter API error: 403 Forbidden
+453 - You currently have access to a subset of X API V2 endpoints and limited v1.1 endpoints (e.g. media post, oauth) only. If you need access to this endpoint, you may need a different access level. You can learn more here: https://developer.x.com/en/portal/product
+2025-09-09 21:48:39,592 - services.youtube_service - INFO - YouTube validation: 20/20 videos passed validation
+2025-09-09 21:48:39,592 - services.youtube_service - INFO - YouTube search completed: 20 valid videos for 'Iphone 16'
+2025-09-09 21:48:41,426 - services.google_trends_service - ERROR - Google Trends error: The request failed: Google returned a response with code 429
+2025-09-09 21:48:45,581 - undetected_chromedriver.patcher - INFO - patching driver executable C:\Users\shrey\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2025-09-09 21:48:46,823 - services.ecommerce_scraper - ERROR - Failed to initialize Selenium driver: Message: session not created: cannot connect to chrome at 127.0.0.1:51073
+from session not created: This version of ChromeDriver only supports Chrome version 140
+Current browser version is 139.0.7258.155
+Stacktrace:
+	GetHandleVerifier [0x0xd8d283+66419]
+	GetHandleVerifier [0x0xd8d2c4+66484]
+	(No symbol) [0x0xb64bd3]
+	(No symbol) [0x0xb9fc48]
+	(No symbol) [0x0xb9ec29]
+	(No symbol) [0x0xb94e6f]
+	(No symbol) [0x0xb94c96]
+	(No symbol) [0x0xbdcce4]
+	(No symbol) [0x0xbdc5ea]
+	(No symbol) [0x0xbd0e16]
+	(No symbol) [0x0xba25ce]
+	(No symbol) [0x0xba34a4]
+	GetHandleVerifier [0x0xfd5ec3+2461619]
+	GetHandleVerifier [0x0xfd0f46+2441270]
+	GetHandleVerifier [0x0xdb6222+234258]
+	GetHandleVerifier [0x0xda61e8+168664]
+	GetHandleVerifier [0x0xdad18d+197245]
+	GetHandleVerifier [0x0xd955d8+100040]
+	GetHandleVerifier [0x0xd95772+100450]
+	GetHandleVerifier [0x0xd7f72a+10266]
+	BaseThreadInitThunk [0x0x767d5d49+25]
+	RtlInitializeExceptionChain [0x0x77d3d2fb+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77d3d281+561]
+
+2025-09-09 21:48:50,321 - services.reddit_service - INFO - Found 100 Reddit posts for Iphone 16
+2025-09-09 21:48:50,322 - services.product_analyzer - INFO - All tasks completed. Results count: 6
+2025-09-09 21:48:50,322 - services.product_analyzer - INFO - Task 0 (reddit) returned 100 items
+2025-09-09 21:48:50,322 - services.product_analyzer - INFO - Task 1 (twitter) returned 3 items
+2025-09-09 21:48:50,323 - services.product_analyzer - INFO - Task 2 (youtube) returned 20 items
+2025-09-09 21:48:50,323 - services.product_analyzer - INFO - Task 3 (news) returned 20 items
+2025-09-09 21:48:50,323 - services.product_analyzer - INFO - Task 4 (google_trends) returned non-list items
+2025-09-09 21:48:50,323 - services.product_analyzer - INFO - Google trends data received: <class 'dict'>
+2025-09-09 21:48:50,323 - services.product_analyzer - INFO - Task 5 (amazon) returned 3 items
+2025-09-09 21:48:50,324 - services.product_analyzer - INFO - Total data collected from all sources: 146 items
+2025-09-09 21:48:50,324 - services.product_analyzer - INFO - Google trends data available: True
+2025-09-09 21:48:56,857 - services.sales_forecaster - INFO - Using synthetic sales data for 'Iphone 16'
+2025-09-09 21:48:56,861 - cmdstanpy - DEBUG - cmd: where.exe tbb.dll
+cwd: None
+2025-09-09 21:48:56,935 - cmdstanpy - DEBUG - TBB already found in load path
+2025-09-09 21:48:56,946 - cmdstanpy - DEBUG - input tempfile: C:\Users\shrey\AppData\Local\Temp\tmpcfpld4bh\li7xtbny.json
+2025-09-09 21:48:56,960 - cmdstanpy - DEBUG - input tempfile: C:\Users\shrey\AppData\Local\Temp\tmpcfpld4bh\qe_mkwa3.json
+2025-09-09 21:48:56,962 - cmdstanpy - DEBUG - idx 0
+2025-09-09 21:48:56,962 - cmdstanpy - DEBUG - running CmdStan, num_threads: None
+2025-09-09 21:48:56,962 - cmdstanpy - DEBUG - CmdStan args: ['C:\\Users\\shrey\\AppData\\Roaming\\Python\\Python313\\site-packages\\prophet\\stan_model\\prophet_model.bin', 'random', 'seed=61614', 'data', 'file=C:\\Users\\shrey\\AppData\\Local\\Temp\\tmpcfpld4bh\\li7xtbny.json', 'init=C:\\Users\\shrey\\AppData\\Local\\Temp\\tmpcfpld4bh\\qe_mkwa3.json', 'output', 'file=C:\\Users\\shrey\\AppData\\Local\\Temp\\tmpcfpld4bh\\prophet_modelkkfiv_h2\\prophet_model-20250909214856.csv', 'method=optimize', 'algorithm=lbfgs', 'iter=10000']
+2025-09-09 21:48:56,963 - cmdstanpy - INFO - Chain [1] start processing
+2025-09-09 21:48:57,020 - cmdstanpy - INFO - Chain [1] done processing
+2025-09-09 21:49:02,726 - services.product_analyzer - INFO - Analysis completed for: Iphone 16
+2025-09-09 22:03:22,843 - main - INFO - Shutting down application
+2025-09-09 22:03:23,004 - uc - INFO - ensuring close
+2025-09-09 22:03:23,074 - uc - INFO - ensuring close
+2025-09-09 22:03:49,694 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-09 22:03:49,701 - services.youtube_service - INFO - YouTube API initialized successfully
+2025-09-09 22:03:50,489 - services.ecommerce_scraper - INFO - UserAgent initialized successfully
+2025-09-09 22:03:51,615 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-09 22:03:51,620 - services.youtube_service - INFO - YouTube API initialized successfully
+2025-09-09 22:03:52,153 - services.ecommerce_scraper - INFO - UserAgent initialized successfully
+2025-09-09 22:03:52,231 - main - INFO - Firebase initialized successfully
