@@ -1,0 +1,31 @@
+services:
+  - type: web
+    name: sentiment-trend-predictor-backend
+    runtime: python3
+    buildCommand: pip install -r requirements.txt
+    startCommand: cd backend && python run.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.9.0
+      - key: OPENROUTER_API_KEY
+        sync: false
+      - key: FIREBASE_PROJECT_ID
+        sync: false
+      - key: FIREBASE_PRIVATE_KEY
+        sync: false
+      - key: FIREBASE_CLIENT_EMAIL
+        sync: false
+      - key: TWITTER_API_KEY
+        sync: false
+      - key: REDDIT_CLIENT_ID
+        sync: false
+      - key: REDDIT_CLIENT_SECRET
+        sync: false
+      - key: NEWS_API_KEY
+        sync: false
+      - key: YOUTUBE_API_KEY
+        sync: false
+      - key: GOOGLE_TRENDS_API_KEY
+        sync: false
+      - key: SECRET_KEY
+        sync: false

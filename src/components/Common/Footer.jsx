@@ -1,0 +1,278 @@
+import React, { useState } from 'react';
+import { BarChart3, Mail, MapPin, Phone, Github, Linkedin, Twitter, ArrowUp, Zap, Shield, Brain } from 'lucide-react';
+
+const Footer = () => {
+  const currentYear = new Date().getFullYear();
+  const [email, setEmail] = useState('');
+  const [status, setStatus] = useState(null); // 'success' | 'error' | null
+  const [loading, setLoading] = useState(false);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const footerLinks = {
+    product: [
+      { name: 'Features', href: '#features' },
+      { name: 'Analytics', href: '#analytics' },
+      { name: 'Pricing', href: '#pricing' },
+      { name: 'API', href: '#api' }
+    ],
+    company: [
+      { name: 'About', href: '#about' },
+      { name: 'Blog', href: '#blog' },
+      { name: 'Careers', href: '#careers' },
+      { name: 'Contact', href: '#contact' }
+    ],
+    resources: [
+      { name: 'Documentation', href: '#docs' },
+      { name: 'Help Center', href: '#help' },
+      { name: 'Community', href: '#community' },
+      { name: 'Status', href: '#status' }
+    ],
+    legal: [
+      { name: 'Privacy', href: '#privacy' },
+      { name: 'Terms', href: '#terms' },
+      { name: 'Security', href: '#security' },
+      { name: 'Cookies', href: '#cookies' }
+    ]
+  };
+
+  const features = [
+    { icon: Brain, text: 'AI-Powered Analytics' },
+    { icon: Zap, text: 'Real-time Processing' },
+    { icon: Shield, text: 'Enterprise Security' }
+  ];
+
+  const handleSubscribe = async () => {
+    if (!email) {
+      setStatus('error');
+      return;
+    }
+    setLoading(true);
+    setStatus(null);
+    try {
+      const response = await fetch('http://localhost:8000/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ email })
+      });
+      const data = await response.json();
+      if (response.ok) {
+        setStatus('success');
+        setEmail('');
+      } else {
+        setStatus('error');
+      }
+    } catch (error) {
+      setStatus('error');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return (
+    <footer className="relative bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-1/4 w-64 h-64 bg-cyan-500 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-pulse"></div>
+        <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-pulse" style={{animationDelay: '2s'}}></div>
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Main Footer Content */}
+        <div className="py-16">
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
+            
+            {/* Brand Section */}
+            <div className="lg:col-span-2 space-y-8">
+              <div className="flex items-center space-x-3">
+                <div className="relative">
+                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl blur opacity-75"></div>
+                  <div className="relative bg-gradient-to-r from-cyan-500 to-purple-600 p-3 rounded-xl">
+                    <BarChart3 size={32} className="text-white" />
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-black bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+                    TrendSight
+                  </h3>
+                  <p className="text-cyan-400 text-sm font-medium">AI-Powered Insights</p>
+                </div>
+              </div>
+
+              <p className="text-gray-300 text-lg leading-relaxed max-w-md">
+                Revolutionizing business intelligence with AI-powered trend analysis and predictive insights for the modern enterprise.
+              </p>
+
+              {/* Features */}
+              <div className="space-y-3">
+                {features.map((feature, index) => (
+                  <div key={index} className="flex items-center space-x-3">
+                    <div className="p-2 bg-white/10 backdrop-blur-sm rounded-lg border border-white/10">
+                      <feature.icon className="h-4 w-4 text-cyan-400" />
+                    </div>
+                    <span className="text-gray-300 text-sm">{feature.text}</span>
+                  </div>
+                ))}
+              </div>
+
+              {/* Contact Info */}
+              <div className="space-y-3">
+                <div className="flex items-center space-x-3 text-gray-300">
+                  <MapPin className="h-5 w-5 text-cyan-400" />
+                  <span className="text-sm">Bangalore, India </span>
+                </div>
+                <div className="flex items-center space-x-3 text-gray-300">
+                  <Mail className="h-5 w-5 text-cyan-400" />
+                  <span className="text-sm">trendsightai@gmail.com</span>
+                </div>
+                
+              </div>
+            </div>
+
+            {/* Links Grid */}
+            <div className="grid grid-cols-2 lg:grid-cols-2 lg:col-span-2 gap-8">
+              <div>
+                <h4 className="text-white font-semibold mb-4">Product</h4>
+                <ul className="space-y-3">
+                  {footerLinks.product.map((link) => (
+                    <li key={link.name}>
+                      <a href={link.href} className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                        {link.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div>
+                <h4 className="text-white font-semibold mb-4">Company</h4>
+                <ul className="space-y-3">
+                  {footerLinks.company.map((link) => (
+                    <li key={link.name}>
+                      <a href={link.href} className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                        {link.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div>
+                <h4 className="text-white font-semibold mb-4">Resources</h4>
+                <ul className="space-y-3">
+                  {footerLinks.resources.map((link) => (
+                    <li key={link.name}>
+                      <a href={link.href} className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                        {link.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div>
+                <h4 className="text-white font-semibold mb-4">Legal</h4>
+                <ul className="space-y-3">
+                  {footerLinks.legal.map((link) => (
+                    <li key={link.name}>
+                      <a href={link.href} className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                        {link.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* Newsletter Signup */}
+          <div className="mt-12 p-8 bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10">
+            <div className="text-center max-w-2xl mx-auto">
+              <h4 className="text-2xl font-bold text-white mb-4">Stay Updated</h4>
+              <p className="text-gray-300 mb-6">Get the latest insights on market trends and AI innovations delivered to your inbox.</p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                <div className="flex-1">
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
+                    className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    disabled={loading}
+                  />
+                </div>
+                <button
+                  onClick={handleSubscribe}
+                  disabled={loading}
+                  className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl font-semibold text-white hover:shadow-lg hover:shadow-cyan-500/25 transform hover:scale-105 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {loading ? 'Subscribing...' : 'Subscribe'}
+                </button>
+              </div>
+              {status === 'success' && (
+                <p className="mt-4 text-green-400 font-semibold">Thank you for subscribing!</p>
+              )}
+              {status === 'error' && (
+                <p className="mt-4 text-red-400 font-semibold">Failed to subscribe. Please try again.</p>
+              )}
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="border-t border-white/10 py-8">
+          <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+            
+            {/* Copyright */}
+            <div className="text-gray-400 text-sm">
+              © {currentYear} TrendSight. All rights reserved. Powered by artificial intelligence.
+            </div>
+
+            {/* Social Links */}
+            <div className="flex items-center space-x-4">
+              <a href="#" className="p-2 bg-white/10 backdrop-blur-sm rounded-lg border border-white/10 text-gray-400 hover:text-white hover:bg-white/20 transition-all duration-200">
+                <Twitter className="h-5 w-5" />
+              </a>
+              <a href="https://www.linkedin.com/in/shreyas-salian25/" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/10 backdrop-blur-sm rounded-lg border border-white/10 text-gray-400 hover:text-white hover:bg-white/20 transition-all duration-200">
+                <Linkedin className="h-5 w-5" />
+              </a>
+              <a href="https://github.com/shreyas250825" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/10 backdrop-blur-sm rounded-lg border border-white/10 text-gray-400 hover:text-white hover:bg-white/20 transition-all duration-200">
+                <Github className="h-5 w-5" />
+              </a>
+            </div>
+
+            {/* Scroll to Top */}
+            <button
+              onClick={scrollToTop}
+              className="p-2 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg text-white hover:shadow-lg hover:shadow-cyan-500/25 transform hover:scale-110 transition-all duration-200"
+              aria-label="Scroll to top"
+            >
+              <ArrowUp className="h-5 w-5" />
+            </button>
+          </div>
+        </div>
+
+        {/* Status Bar */}
+        <div className="border-t border-white/10 py-4">
+          <div className="flex items-center justify-center space-x-6 text-sm">
+            <div className="flex items-center space-x-2">
+              <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+              <span className="text-gray-400">All Systems Operational</span>
+            </div>
+            <div className="text-gray-500">•</div>
+            <div className="text-gray-400">99.9% Uptime</div>
+            <div className="text-gray-500">•</div>
+            <div className="text-gray-400">24/7 Support</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
