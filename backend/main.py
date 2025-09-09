@@ -63,11 +63,10 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.security import HTTPBearer
 
 # --- NLTK setup (must be after environment variables loaded) ---
-import nltk
+# Set NLTK_DATA env var before importing nltk to ensure wordnet is found during import
+os.environ['NLTK_DATA'] = '/tmp/nltk_data'
 
-# NLTK data is downloaded during build, so just ensure path is set
-nltk_data_dir = os.path.join(os.getcwd(), 'nltk_data')
-nltk.data.path.append(nltk_data_dir)
+import nltk
 
 # Now safe to import NLTK modules that use WordNet
 from nltk.stem.wordnet import WordNetLemmatizer

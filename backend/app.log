@@ -4960,3 +4960,15 @@ cwd: None
 2025-09-09 14:30:34,632 - services.youtube_service - INFO - YouTube API initialized successfully
 2025-09-09 14:30:35,524 - main - INFO - Firebase initialized successfully
 2025-09-09 14:41:26,446 - main - INFO - Shutting down application
+2025-09-09 14:42:56,541 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-09 14:42:56,547 - services.youtube_service - INFO - YouTube API initialized successfully
+2025-09-09 14:42:57,995 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-09 14:42:57,998 - services.youtube_service - INFO - YouTube API initialized successfully
+2025-09-09 14:42:58,824 - main - INFO - Firebase initialized successfully
+2025-09-09 14:43:21,938 - main - INFO - Shutting down application
+2025-09-09 14:43:24,572 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-09 14:43:24,575 - services.youtube_service - INFO - YouTube API initialized successfully
+2025-09-09 14:43:25,707 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-09 14:43:25,710 - services.youtube_service - INFO - YouTube API initialized successfully
+2025-09-09 14:43:26,377 - main - INFO - Firebase initialized successfully
+2025-09-09 14:48:22,513 - main - INFO - Shutting down application
