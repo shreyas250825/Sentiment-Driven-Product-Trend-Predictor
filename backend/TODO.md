@@ -1,4 +1,4 @@
-# Fix fake_useragent Deployment Error
+# Fix Deployment Errors
 
 ## Tasks
 - [x] Import FakeUserAgentError exception in ecommerce_scraper.py
@@ -6,3 +6,4 @@
 - [x] Implement fallback user agent mechanism
 - [x] Update _get_random_headers method to handle fallback
 - [x] Test the scraper initialization
+- [x] Add email-validator dependency to requirements.txt
