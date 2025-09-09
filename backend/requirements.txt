@@ -12,7 +12,7 @@ passlib==1.7.4
 bcrypt==4.0.1
 nltk==3.9.0
 newsapi-python==0.2.7
-aiohttp==3.8.5
+aiohttp>=3.9.0
 prophet==1.1.4
 # Removed pystan and Cython due to build issues on Render
 pandas>=2.0.0
